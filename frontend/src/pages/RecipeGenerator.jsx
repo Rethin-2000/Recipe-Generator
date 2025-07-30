@@ -13,7 +13,7 @@ function RecipeGenerator() {
     setRecipe(null);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/ai/generate', {
+      const res = await axios.post('https://recipe-generator-so03.onrender.com/api/ai/generate', {
         ingredients: ingredients.split(',').map(i => i.trim()),
       });
 

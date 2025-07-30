@@ -4,15 +4,16 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-
+import dotenv from 'dotenv';
+import meta from 'meta';
+dotenv.config();
 const firebaseConfig = {
-  apiKey: "AIzaSyCp1t4FCLUPHX1zcneaJ7fAsVL_Ey8708c",
-  authDomain: "recipie-50e2f.firebaseapp.com",
-  projectId: "recipie-50e2f",
-  storageBucket: "recipie-50e2f.firebasestorage.app",
-  messagingSenderId: "512886393032",
-  appId: "1:512886393032:web:c64c17face632d52187dfd",
-  measurementId: "G-8TWBF4FW63"
+  apiKey: meta.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: meta.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: meta.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: meta.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: meta.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: meta.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
